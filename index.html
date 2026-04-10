@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yongeun Cho — ML Engineer & CV Researcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:#fafaf8;color:#1a1a2e;line-height:1.7;}
+a{text-decoration:none;color:inherit;}
+nav{position:sticky;top:0;z-index:100;background:rgba(250,250,248,0.93);backdrop-filter:blur(8px);border-bottom:0.5px solid #e8e6e1;padding:0 2rem;}
+nav .inner{max-width:880px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:54px;}
+nav .logo{font-family:'DM Serif Display',serif;font-size:17px;letter-spacing:-0.2px;}
+nav .links{display:flex;gap:1.5rem;}
+nav .links a{font-size:13px;color:#6b7280;transition:color .2s;}
+nav .links a:hover{color:#4f6ef7;}
+.wrap{max-width:880px;margin:0 auto;padding:0 2rem;}
+section{padding:5rem 0;}
+section+section{border-top:0.5px solid #e8e6e1;}
+.hero{padding:6rem 0 4.5rem;}
+.hero-inner{display:flex;align-items:center;justify-content:space-between;gap:3rem;}
+.hero-text{flex:1;min-width:0;}
+.hero-eyebrow{font-size:11.5px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:#4f6ef7;display:flex;align-items:center;gap:8px;margin-bottom:1.3rem;}
+.hero-eyebrow::after{content:'';flex:1;max-width:32px;height:1px;background:#4f6ef7;}
+.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2rem,4.5vw,3.1rem);line-height:1.1;letter-spacing:-.025em;margin-bottom:1rem;}
+.hero h1 em{font-style:italic;color:#4f6ef7;}
+.hero .sub{font-size:15px;color:#6b7280;max-width:500px;margin-bottom:1.6rem;font-weight:300;line-height:1.75;}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:2.2rem;}
+.btn-p{padding:9px 20px;background:#4f6ef7;color:#fff;border-radius:8px;font-size:13.5px;font-weight:500;transition:opacity .2s;display:inline-block;}
+.btn-p:hover{opacity:.85;}
+.btn-g{padding:9px 20px;background:transparent;border:0.5px solid #d1d5db;border-radius:8px;font-size:13.5px;color:#1a1a2e;display:inline-block;transition:background .2s;}
+.btn-g:hover{background:#f3f4f6;}
+.pills{display:flex;gap:7px;flex-wrap:wrap;}
+.pill{font-size:11.5px;padding:4px 12px;border-radius:99px;background:#eef2ff;color:#4f6ef7;font-weight:500;}
+.hero-photo{flex-shrink:0;width:190px;height:190px;border-radius:50%;overflow:hidden;border:3px solid #fff;outline:1px solid #e8e6e1;}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+.s-label{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#4f6ef7;margin-bottom:.8rem;}
+.s-title{font-family:'DM Serif Display',serif;font-size:clamp(1.5rem,3vw,2rem);line-height:1.18;letter-spacing:-.01em;margin-bottom:1.8rem;}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3.5rem;align-items:start;}
+.about-text p{font-size:15px;color:#6b7280;margin-bottom:.9rem;font-weight:300;}
+.stat-cards{display:flex;flex-direction:column;gap:1rem;}
+.stat-card{background:#fff;border:0.5px solid #e8e6e1;border-radius:12px;padding:1.2rem 1.4rem;}
+.stat-num{font-family:'DM Serif Display',serif;font-size:1.85rem;color:#4f6ef7;line-height:1;margin-bottom:3px;}
+.stat-desc{font-size:12.5px;color:#6b7280;line-height:1.5;}
+.awards-strip{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.5rem;}
+.award-badge{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:500;padding:4px 11px;border-radius:8px;}
+.award-badge.gold{background:#fefce8;color:#a16207;}
+.award-badge.top100{background:#f0fdf4;color:#15803d;}
+.award-badge.schol{background:#fdf4ff;color:#9333ea;}
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;}
+.proj-card{background:#fff;border:0.5px solid #e8e6e1;border-radius:12px;padding:1.4rem;transition:border-color .2s,transform .2s;display:flex;flex-direction:column;cursor:pointer;position:relative;text-decoration:none;color:inherit;}
+.proj-card:hover{border-color:#4f6ef7;transform:translateY(-3px);}
+.proj-card::after{content:'↗';position:absolute;top:1.2rem;right:1.2rem;font-size:14px;color:#d1d5db;transition:color .2s;}
+.proj-card:hover::after{color:#4f6ef7;}
+.proj-top{display:flex;align-items:flex-start;gap:8px;margin-bottom:.85rem;padding-right:1.5rem;}
+.proj-icon{font-size:20px;line-height:1;flex-shrink:0;}
+.badge-row{display:flex;gap:5px;flex-wrap:wrap;}
+.badge{font-size:10.5px;font-weight:500;padding:3px 9px;border-radius:99px;white-space:nowrap;}
+.badge.research{background:#eff6ff;color:#1d4ed8;}
+.badge.award{background:#fdf4ff;color:#9333ea;}
+.badge.proj{background:#f0fdf4;color:#15803d;}
+.badge.ongoing{background:#fff7ed;color:#c2410c;}
+.proj-title{font-weight:500;font-size:14.5px;color:#1a1a2e;margin-bottom:4px;line-height:1.35;}
+.proj-org{font-size:12px;color:#9ca3af;margin-bottom:.7rem;}
+.proj-desc{font-size:13px;color:#6b7280;line-height:1.6;margin-bottom:.85rem;flex:1;}
+.proj-metrics{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:.85rem;}
+.metric{font-size:11px;padding:3px 9px;border-radius:6px;background:#f5f5f5;color:#374151;border:0.5px solid #e5e7eb;font-weight:500;}
+.proj-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:auto;}
+.tag{font-size:11px;padding:2px 8px;border-radius:4px;background:#eef2ff;color:#4f6ef7;}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+.skill-group{background:#fff;border:0.5px solid #e8e6e1;border-radius:12px;padding:1.1rem 1.3rem;}
+.sk-title{font-size:12.5px;font-weight:500;color:#1a1a2e;margin-bottom:.75rem;}
+.chips{display:flex;flex-wrap:wrap;gap:5px;}
+.chip{font-size:11.5px;padding:3px 9px;border-radius:6px;background:#f9fafb;color:#6b7280;border:0.5px solid #e5e7eb;}
+.edu-list{display:flex;flex-direction:column;gap:.9rem;}
+.edu-card{background:#fff;border:0.5px solid #e8e6e1;border-radius:12px;padding:1.3rem 1.5rem;display:flex;gap:1.1rem;align-items:flex-start;}
+.edu-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:7px;}
+.edu-school{font-weight:500;font-size:15px;}
+.edu-deg{font-size:13px;color:#6b7280;margin-top:2px;}
+.edu-year{font-size:12px;color:#4f6ef7;font-weight:500;margin-top:5px;}
+.edu-note{font-size:12px;color:#9ca3af;margin-top:3px;font-style:italic;}
+.pub-list{display:flex;flex-direction:column;gap:.75rem;}
+.pub-item{background:#fff;border:0.5px solid #e8e6e1;border-radius:10px;padding:1.1rem 1.3rem;display:flex;gap:1rem;align-items:flex-start;}
+.pub-dot{width:6px;height:6px;border-radius:50%;background:#4f6ef7;flex-shrink:0;margin-top:8px;}
+.pub-text{font-size:13px;color:#6b7280;line-height:1.6;}
+.pub-venue{font-size:11.5px;color:#9ca3af;margin-top:3px;}
+.contact-box{background:#fff;border:0.5px solid #e8e6e1;border-radius:16px;padding:3rem;text-align:center;max-width:520px;margin:0 auto;}
+.contact-box h2{font-family:'DM Serif Display',serif;font-size:1.9rem;margin-bottom:.65rem;letter-spacing:-.01em;}
+.contact-box p{font-size:14.5px;color:#6b7280;margin-bottom:1.75rem;font-weight:300;}
+.contact-links{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;}
+.c-link{display:flex;align-items:center;gap:7px;font-size:13px;padding:8px 16px;border:0.5px solid #e8e6e1;border-radius:8px;transition:border-color .2s,color .2s;}
+.c-link:hover{border-color:#4f6ef7;color:#4f6ef7;}
+footer{padding:1.75rem;text-align:center;font-size:12px;color:#9ca3af;border-top:0.5px solid #e8e6e1;}
+@media(max-width:640px){
+  .about-grid,.proj-grid,.skills-grid{grid-template-columns:1fr;}
+  .wrap{padding:0 1.25rem;}
+  .hero-inner{flex-direction:column-reverse;gap:2rem;align-items:flex-start;}
+  .hero-photo{width:120px;height:120px;}
+  nav .links{gap:1rem;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <div class="logo">Yongeun Cho</div>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-eyebrow">ML Engineer · CV Researcher</div>
+        <h1>Building AI for<br><em>people</em> who need it.</h1>
+        <p class="sub">M.S. Data Science @ Stony Brook University · CV Lab (Prof. Zhaozheng Yin)<br>Focused on medical image segmentation, privacy-preserving ML, and assistive technology.</p>
+        <div class="btns">
+          <a href="#projects" class="btn-p">View Projects</a>
+          <a href="https://github.com/gdakate" target="_blank" class="btn-g">GitHub</a>
+        </div>
+        <div class="pills">
+          <span class="pill">SAM · Foundation Models</span>
+          <span class="pill">Medical Imaging</span>
+          <span class="pill">Privacy-Preserving ML</span>
+          <span class="pill">Assistive Technology</span>
+          <span class="pill">PyTorch · Python · Java</span>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="data:image/webp;base64,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" alt="Yongeun Cho">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="s-label">About Me</p>
+        <h2 class="s-title">Human-centered AI,<br>built with rigor.</h2>
+        <p>I'm a first-year M.S. student in Data Science at Stony Brook University, researching at the CV Lab under Prof. Zhaozheng Yin. My work sits at the intersection of computer vision, medical imaging, and real-world accessibility.</p>
+        <p>I care deeply about building AI that improves lives — helping clinicians segment polyps more accurately under low-annotation constraints, protecting user privacy through a 53%-faster face anonymization pipeline, and giving visually impaired shoppers real-time independence through a gesture-driven grocery app.</p>
+        <p>Beyond research, I bring a strong backend engineering background in Spring Boot, AWS, and GCP — giving me the full-stack perspective to take ML from prototype to production.</p>
+        <div class="awards-strip">
+          <span class="award-badge gold">🥇 Google ML Bootcamp 2nd Prize</span>
+          <span class="award-badge top100">🌍 Google Solution Challenge Top 100</span>
+          <span class="award-badge gold">🥇 IPS AI Competition Gold</span>
+          <span class="award-badge schol">🎓 SMWU Software Scholarship</span>
+        </div>
+      </div>
+      <div class="stat-cards">
+        <div class="stat-card"><div class="stat-num">+42%</div><div class="stat-desc">DSC on Kvasir-SEG polyp segmentation — exceeded EviPrompt paper's reported score (34.85 vs 24.45)</div></div>
+        <div class="stat-card"><div class="stat-num">53%</div><div class="stat-desc">Inference time reduction on diffusion-based face anonymization (18.6s → 8.7s per image)</div></div>
+        <div class="stat-card"><div class="stat-num">83%</div><div class="stat-desc">Object detection accuracy on assistive grocery shopping app (YOLOv8)</div></div>
+        <div class="stat-card"><div class="stat-num">2</div><div class="stat-desc">Peer-reviewed conference publications (2024)</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <p class="s-label">Research & Projects</p>
+    <h2 class="s-title">What I've built.</h2>
+    <div class="proj-grid">
+      <a class="proj-card" href="https://github.com/gdakate" target="_blank">
+        <div class="proj-top"><span class="proj-icon">🔬</span><div class="badge-row"><span class="badge research">Research</span><span class="badge ongoing">Ongoing</span></div></div>
+        <div class="proj-title">Medical Image Segmentation with Vision Foundation Models</div>
+        <div class="proj-org">Stony Brook CV Lab · Jan 2026 – Present</div>
+        <div class="proj-desc">Reproducing and extending SAM-based models (EviPrompt, One-Prompt) for polyp segmentation on Kvasir-SEG and NCI-ISBI. Achieved DSC 34.85, significantly exceeding the paper's reported 24.45. Investigating gaze-informed prompting and zero-shot domain adaptation for clinical deployment.</div>
+        <div class="proj-metrics"><span class="metric">DSC 34.85 vs paper's 24.45</span><span class="metric">Zero-shot SAM</span></div>
+        <div class="proj-tags"><span class="tag">SAM</span><span class="tag">PyTorch</span><span class="tag">Medical Imaging</span><span class="tag">Weak Supervision</span></div>
+      </a>
+      <a class="proj-card" href="https://github.com/ksta-google-simz/fawn" target="_blank">
+        <div class="proj-top"><span class="proj-icon">🎭</span><div class="badge-row"><span class="badge award">2nd Prize · Google ML Bootcamp</span></div></div>
+        <div class="proj-title">F.A.W.N: Face Anonymization with Neural Networks</div>
+        <div class="proj-org">KSTA/NIPA Google ML Bootcamp · Mar 2025</div>
+        <div class="proj-desc">Improved a diffusion-based face anonymization pipeline via identity-exclusion logic and inference tuning, cutting average inference time by 53% (18.6s → 8.7s) without sacrificing quality. Designed multi-metric evaluation using Re-ID rate, FID, and attribute-preservation.</div>
+        <div class="proj-metrics"><span class="metric">53% faster inference</span><span class="metric">Re-ID · FID · Attr. Preservation</span></div>
+        <div class="proj-tags"><span class="tag">Diffusion Models</span><span class="tag">Privacy ML</span><span class="tag">PyTorch</span><span class="tag">OpenCV</span></div>
+      </a>
+      <a class="proj-card" href="https://github.com/smwu-ips-Sayosayo/sayosayo_ML" target="_blank">
+        <div class="proj-top"><span class="proj-icon">🛒</span><div class="badge-row"><span class="badge proj">IPS AI Competition · Gold</span></div></div>
+        <div class="proj-title">Real-time Grocery App for Visually Impaired Users</div>
+        <div class="proj-org">Team Leader, Backend & ML · Mar – May 2024</div>
+        <div class="proj-desc">Led development of an assistive shopping app using YOLOv8 (83% detection accuracy) with MediaPipe gesture recognition and audio feedback. Deployed real-time Flask inference on AWS EC2 with sub-second latency. Published at the 2024 Korean Entertainment Media Society Conference.</div>
+        <div class="proj-metrics"><span class="metric">83% detection accuracy</span><span class="metric">&lt;1s latency · AWS EC2</span></div>
+        <div class="proj-tags"><span class="tag">YOLOv8</span><span class="tag">MediaPipe</span><span class="tag">Flask</span><span class="tag">AWS</span></div>
+      </a>
+      <a class="proj-card" href="https://github.com/gdakate/The-Sandbox" target="_blank">
+        <div class="proj-top"><span class="proj-icon">🎮</span><div class="badge-row"><span class="badge research">Research</span><span class="badge ongoing">Ongoing</span></div></div>
+        <div class="proj-title">The Sandbox: Human-AI Social Deduction Game</div>
+        <div class="proj-org">CSE 590 · Stony Brook University · 2025</div>
+        <div class="proj-desc">Multiplayer social deduction game where humans and LLM agents (Claude, GPT-4o, Gemini, Llama) compete to identify each other. Built full Phase 1 backend: FastAPI + WebSocket game server, phase state machine, word bank, role-based payload distribution, and integration tests.</div>
+        <div class="proj-metrics"><span class="metric">FastAPI · WebSocket</span><span class="metric">4 LLM agents</span><span class="metric">Phase 1 complete</span></div>
+        <div class="proj-tags"><span class="tag">FastAPI</span><span class="tag">LLM</span><span class="tag">Human-AI Interaction</span><span class="tag">Python</span></div>
+      </a>
+      <a class="proj-card" href="https://github.com/Regular-Pharmasist/backend" target="_blank">
+        <div class="proj-top"><span class="proj-icon">💊</span><div class="badge-row"><span class="badge proj">Conference · Bronze Award</span></div></div>
+        <div class="proj-title">Drug Interaction & Adverse Event Prevention App</div>
+        <div class="proj-org">Team Leader, Backend & ML · Sep 2023 – Mar 2024</div>
+        <div class="proj-desc">Designed a pill management system for dosage tracking, real-time drug interaction checks, and health-risk alerts via public healthcare APIs. Deployed on GCP with 99.9% uptime. Presented at the 2024 Korea Digital Content Society Summer Conference.</div>
+        <div class="proj-metrics"><span class="metric">99.9% uptime · GCP</span><span class="metric">Real-time API integration</span></div>
+        <div class="proj-tags"><span class="tag">Spring Boot</span><span class="tag">Java</span><span class="tag">GCP</span><span class="tag">Healthcare</span></div>
+      </a>
+      <a class="proj-card" href="https://github.com/dsc-sookmyung/2023-High-Light-SolutionChallenge" target="_blank">
+        <div class="proj-top"><span class="proj-icon">🌍</span><div class="badge-row"><span class="badge award">Google Solution Challenge · Global Top 100</span></div></div>
+        <div class="proj-title">High-Light: Lecture Accessibility for Visually Impaired</div>
+        <div class="proj-org">GDSC Sookmyung · Team Leader · Jan – May 2023</div>
+        <div class="proj-desc">Led a team of 3 in the 2023 Google Solution Challenge. Built an assistive service converting lecture materials into audio for visually impaired students. Designed REST APIs with Spring Boot, OAuth2, and JWT auth. Earned Global Top 100 recognition worldwide.</div>
+        <div class="proj-metrics"><span class="metric">Global Top 100</span><span class="metric">Spring Boot · OAuth2</span></div>
+        <div class="proj-tags"><span class="tag">Spring Boot</span><span class="tag">Java</span><span class="tag">Assistive Tech</span><span class="tag">OAuth2</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <p class="s-label">Skills</p>
+    <h2 class="s-title">Tech stack.</h2>
+    <div class="skills-grid">
+      <div class="skill-group"><div class="sk-title">ML & Deep Learning</div><div class="chips"><span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Scikit-learn</span><span class="chip">Diffusion Models</span><span class="chip">SAM</span><span class="chip">YOLOv5/v8</span></div></div>
+      <div class="skill-group"><div class="sk-title">Computer Vision</div><div class="chips"><span class="chip">OpenCV</span><span class="chip">MediaPipe</span><span class="chip">Image Segmentation</span><span class="chip">Object Detection</span><span class="chip">Medical Imaging</span></div></div>
+      <div class="skill-group"><div class="sk-title">Foundation Models & LLMs</div><div class="chips"><span class="chip">HuggingFace</span><span class="chip">LangChain</span><span class="chip">Prompt Engineering</span><span class="chip">LLM Evaluation</span></div></div>
+      <div class="skill-group"><div class="sk-title">Backend & Deployment</div><div class="chips"><span class="chip">Spring Boot</span><span class="chip">FastAPI</span><span class="chip">Flask</span><span class="chip">Docker</span><span class="chip">AWS EC2</span><span class="chip">GCP</span><span class="chip">WebSocket</span></div></div>
+      <div class="skill-group"><div class="sk-title">Languages</div><div class="chips"><span class="chip">Python</span><span class="chip">Java</span><span class="chip">C/C++</span><span class="chip">SQL</span><span class="chip">JavaScript</span></div></div>
+      <div class="skill-group"><div class="sk-title">Data & Evaluation</div><div class="chips"><span class="chip">Pandas</span><span class="chip">Matplotlib</span><span class="chip">Benchmarking</span><span class="chip">Experiment Design</span><span class="chip">Model Eval</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <p class="s-label">Education</p>
+    <h2 class="s-title">Academic background.</h2>
+    <div class="edu-list">
+      <div class="edu-card"><div class="edu-dot" style="background:#4f6ef7;"></div><div><div class="edu-school">Stony Brook University</div><div class="edu-deg">M.S. in Data Science · CV Lab (Advisor: Prof. Zhaozheng Yin)</div><div class="edu-year">Expected May 2027 · Stony Brook, NY</div></div></div>
+      <div class="edu-card"><div class="edu-dot" style="background:#9ca3af;"></div><div><div class="edu-school">Sookmyung Women's University (SMWU)</div><div class="edu-deg">B.S. in IT Engineering</div><div class="edu-year">Mar 2020 – Aug 2024 · Seoul, Republic of Korea</div><div class="edu-note">SMWU Software Talent Scholarship · GDSC Sookmyung · Google Solution Challenge Global Top 100</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="wrap">
+    <p class="s-label">Publications</p>
+    <h2 class="s-title">Conference papers.</h2>
+    <div class="pub-list">
+      <div class="pub-item"><div class="pub-dot"></div><div><div class="pub-text">Y.E. Cho, J.W. Lee, "Real-time Shopping Assistant for the Visually Impaired"</div><div class="pub-venue">2024 Korean Entertainment Media Society Fall Conference, Vol. 27, No. 2 · Seoul, Korea</div></div></div>
+      <div class="pub-item"><div class="pub-dot"></div><div><div class="pub-text">Y.E. Cho, J.W. Lee, "A Study on Drug Interaction and Side Effect Prevention"</div><div class="pub-venue">2024 Korea Digital Content Society Summer Conference · Seoul, Republic of Korea · July 2024</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-box">
+      <p class="s-label" style="text-align:center;">Contact</p>
+      <h2>Let's connect.</h2>
+      <p>Open to MLE and AI Engineer opportunities in New York. Always happy to chat about research too.</p>
+      <div class="contact-links">
+        <a href="mailto:gdakate1215@gmail.com" class="c-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>gdakate1215@gmail.com</a>
+        <a href="https://linkedin.com/in/yongeuncho" target="_blank" class="c-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+        <a href="https://github.com/gdakate" target="_blank" class="c-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>Yongeun Cho · 2025 · Stony Brook, NY</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t) t.scrollIntoView({behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
