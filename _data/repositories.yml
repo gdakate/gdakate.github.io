@@ -1,0 +1,10 @@
+github_users:
+  - gdakate
+
+repo_description_lines_max: 2
+
+github_repos:
+  - gdakate/The-Sandbox
+  - gdakate/llm-guided-synthetic-image-pipeline
+  - gdakate/sayosayo_ML
+  - gdakate/GamePredictionProject
