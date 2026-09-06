@@ -32,8 +32,8 @@
       "position": "Research Project Assistant",
       "location": "Stony Brook, NY, USA",
       "startDate": "2026-05-01",
-      "endDate": "",
-      "summary": "Studying how pretrained video foundation models represent spatiotemporal evidence in clinical video.",
+      "endDate": "2026-08-01",
+      "summary": "Studied how pretrained video foundation models represent spatiotemporal evidence in clinical video.",
       "highlights": [
         "Built interpretability pipeline using frozen V-JEPA representations from 3,600+ ICU clips.",
         "Implemented Top-K Sparse Autoencoders with multi-seed stability testing and optical-flow grounding.",

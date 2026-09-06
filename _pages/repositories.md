@@ -3,8 +3,8 @@ layout: page
 permalink: /repositories/
 title: Repositories
 description: GitHub profile and selected repositories.
-nav: true
-nav_order: 5
+nav: false
+nav_order: 95
 ---
 
 {% if site.data.repositories.github_users %}

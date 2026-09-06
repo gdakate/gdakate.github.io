@@ -39,27 +39,36 @@ cv:
         position: Research Project Assistant
         location: Stony Brook, NY, USA
         start_date: 2026-05
-        end_date: present
+        end_date: 2026-08
         highlights:
-          - Built interpretability pipeline using frozen V-JEPA representations from 3,600+ ICU clips.
-          - Implemented Top-K Sparse Autoencoders (PyTorch) with multi-seed stability testing, activation-based retrieval, and optical-flow grounding.
-          - Developed region–time counterfactual auditing framework; counterfactual evidence outperformed native attention by +0.23 logit.
+          - Built a clinical video interpretability pipeline using frozen V-JEPA representations from 3,600+ ICU clips across multiscale eye-, face-, and patient-level streams.
+          - Implemented Top-K Sparse Autoencoders in PyTorch; evaluated latent features through multi-seed stability testing, activation-based retrieval, optical-flow grounding, and artifact controls.
+          - Developed a region–time counterfactual auditing framework; outperformed native attention by +0.23 logit while matching Integrated Gradients.
+
+      - company: Snowrose Reorganization Task Force Team
+        position: Backend Developer
+        location: Seoul, Republic of Korea
+        start_date: 2024-02
+        end_date: 2024-08
+        highlights:
+          - Designed backend APIs using Spring Boot and Java.
+          - Improved database query latency by 30% through indexing optimization.
+          - Supported 1,700+ daily requests; resolved 50+ critical issues.
 
       - company: Mand.ro
         position: Software Engineering Intern
-        location: Seoul, Republic of Korea
+        location: Incheon, Republic of Korea
         start_date: 2024-08
         end_date: 2024-09
         highlights:
-          - Optimized real-time EMG visualization for prosthetic control.
-          - Replaced Matplotlib pipeline with OpenCV, reducing visualization latency to under 1 second.
+          - Optimized real-time EMG visualization for prosthetic control, reducing latency to under 1 second by migrating from Matplotlib to OpenCV.
           - Improved signal-to-visual responsiveness for assistive robotics/HMI applications.
 
     Awards:
       - title: 2nd Prize — Google ML Bootcamp
         awarder: KSTA / NIPA
         date: 2025-03
-        summary: "Awarded for face anonymization pipeline work (FAWN project); 53% inference speedup with maintained privacy-utility tradeoff."
+        summary: "Face anonymization pipeline (FAWN); 53% inference speedup with maintained privacy-utility tradeoff."
 
       - title: Gold Award — IT Project Competition
         awarder: Sookmyung Women's University
@@ -75,27 +84,10 @@ cv:
         awarder: Sookmyung Women's University
         date: 2022
 
-    Publications:
-      - title: "Real-time Shopping Assistant for the Visually Impaired"
-        authors:
-          - Yongeun Cho
-          - Jae-Won Lee
-        publisher: Korean Entertainment Media Society Fall Conference (Vol. 27, No. 2)
-        releaseDate: 2024
-        summary: "Object detection (YOLOv8), gesture recognition (MediaPipe), and cloud inference (Flask/AWS) for assistive retail navigation."
-
-      - title: "A Study on Drug Interaction and Side Effect Prevention"
-        authors:
-          - Yongeun Cho
-          - Jae-Won Lee
-        publisher: Korea Digital Content Society Summer Conference
-        releaseDate: 2024-07
-        summary: "Analysis of drug interaction risk factors and mitigation strategies."
-
     Skills:
       - name: Machine Learning & Vision
         icon: fa-solid fa-brain
-        keywords: "PyTorch, TensorFlow, Sparse Autoencoders, Diffusion Models, SAM, YOLOv5/v8, OpenCV, MediaPipe, Optical Flow, scikit-learn"
+        keywords: "PyTorch, TensorFlow, scikit-learn, Sparse Autoencoders, Diffusion Models, SAM, YOLOv5/v8, OpenCV, MediaPipe, Optical Flow"
 
       - name: Foundation Models & Model Analysis
         icon: fa-solid fa-magnifying-glass
