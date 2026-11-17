@@ -26,8 +26,9 @@ The question: which body regions and time windows does a frozen video-foundation
 
 ### Results
 
+- The self-attention predictor on frozen V-JEPA 2.1 embeddings reached **0.94 AUROC** on subject-disjoint folds.
 - At a 10% evidence budget, counterfactual direction-based evidence reduced the predictor's logit **0.23 more than native attention**, with a 95% CI that excluded zero.
-- It **matched Integrated Gradients** without needing gradients, so it can be reused across predictors.
+- Compared with Integrated Gradients, it was statistically comparable on one predictor and slightly behind on the other. Its advantage is that it needs no gradients, so it can be reused across predictors.
 - Raw attention gave good predictions but pointed to different locations across seeds and heads, which is why it made a weak explanation.
 
 ### Takeaways

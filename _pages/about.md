@@ -35,17 +35,21 @@ I have shipped work across PyTorch research pipelines, real-time multi-agent LLM
 
 ### Highlights
 
-- **Clinical video interpretability.** Built a SAM3 + frozen V-JEPA 2.1 pipeline over 3,689 ICU clips (37 patients). My gradient-free attribution method beat native attention by **+0.23 logit** at a 10% budget and matched Integrated Gradients. [→ project](/projects/1_vjepa_interpretability/)
+- **Clinical video interpretability.** Built a SAM3 + frozen V-JEPA 2.1 pipeline over 3,689 ICU clips (37 patients), reaching **0.94 AUROC**. My gradient-free attribution method beat native attention by **+0.23 logit** at a 10% budget. [→ project](/projects/1_vjepa_interpretability/)
 - **Human–AI deception arena.** Real-time multiplayer game where humans and LLM agents (Claude, GPT-4o, Gemini, Llama) play anonymously. In a pilot, humans detected AI players **73%** of the time vs. **40%** for AI raters. [→ project](/projects/2_sandbox/) &middot; [code](https://github.com/gdakate/The-Sandbox)
-- **Foundation-model segmentation.** Reproduced EviPrompt and ProtoSAM on Kvasir-SEG (**DSC 34.85** vs. 24.45 reported) and showed that support-image choice alone swings mean Dice from 0.368 to 0.735. [→ project](/projects/3_medical_segmentation/)
+- **Foundation-model segmentation.** Reproduced few-shot SAM-based segmentation on Kvasir-SEG (**34.85% Dice** vs. 24.45% reported) and showed that support-image choice alone swings mean Dice from 36.8% to 73.5%. [→ project](/projects/3_medical_segmentation/)
 - **Diffusion face anonymization.** Cut inference time by **53%** (18.6 s → 8.7 s); **2nd Prize**, Google ML Bootcamp 2025. [→ project](/projects/4_fawn/)
 
 [See all projects →](/projects/)
 
 ### Experience
 
+- **Graduate Student Researcher (M.S. Thesis)**, Computer Vision Lab, Stony Brook University &middot; _Feb 2026 – Present_<br>
+  Extending the ICU work as my M.S. thesis: which spatial and temporal evidence drives predictions from frozen V-JEPA 2.1 representations.
 - **Research Project Assistant**, Stony Brook Medicine (Neurosurgery) &middot; _May 2026 – Aug 2026_<br>
   Interpretability and counterfactual auditing for a frozen ICU agitation predictor built on V-JEPA representations.
+- **Backend Developer**, Snowrose Reorganization Task Force Team, Seoul &middot; _Feb 2024 – Aug 2024_<br>
+  Cut query latency by 30% for Spring Boot APIs serving 1,700+ daily requests through database indexing.
 - **Software Engineering Intern**, Mand.ro, Incheon &middot; _Aug 2024 – Sep 2024_<br>
   Cut real-time EMG visualization latency for prosthetic control to under 1 s (Matplotlib → OpenCV).
 - **Teaching Assistant**, IAE 101 (Intro to Digital Intelligence) and **Pre-College STEM Robotics Instructor**, Stony Brook University &middot; _Sep 2026 – Present_

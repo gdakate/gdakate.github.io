@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Medical Image Segmentation with Vision Foundation Models
-description: Reproduced EviPrompt and ProtoSAM on Kvasir-SEG (DSC 34.85 vs. 24.45 reported); support-image choice alone swings Dice 0.37–0.74
+description: Reproduced few-shot SAM-based segmentation on Kvasir-SEG (34.85% Dice vs. 24.45% reported); support-image choice alone swings Dice from 37% to 74%
 importance: 3
 category: research
 ---
@@ -23,8 +23,8 @@ In practice they depend on a small set of labeled support images, and papers rar
 
 ### Results
 
-- My reproduction reached **DSC 34.85**, compared with **24.45** reported in prior work.
-- Support-image selection alone moved mean Dice from **0.368 to 0.735**, nearly a 2× swing with the same model.
+- My reproduction reached **34.85% Dice**, compared with **24.45%** reported in prior work.
+- Support-image selection alone moved mean Dice from **36.8% to 73.5%**, nearly a 2× swing with the same model.
 - Visual-similarity heuristics did not reliably predict good supports; feature-level compatibility mattered more.
 
 ### Takeaways

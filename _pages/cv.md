@@ -68,9 +68,9 @@ description:
   <div class="cv-entry-title">Research Project Assistant</div>
   <div class="cv-entry-loc">Stony Brook, NY, USA</div>
   <ul>
-    <li>Built a clinical video interpretability pipeline using frozen V-JEPA representations from 3,600+ ICU clips across multiscale eye-, face-, and patient-level streams.</li>
-    <li>Implemented Top-K Sparse Autoencoders in PyTorch; evaluated latent features through multi-seed stability testing, activation-based retrieval, optical-flow grounding, and artifact controls.</li>
-    <li>Developed a region–time counterfactual auditing framework for frozen MLP and self-attention predictors, outperforming native attention by +0.23 logit while matching Integrated Gradients.</li>
+    <li>Developed a PyTorch pipeline for ICU agitation prediction using SAM3-based region extraction and frozen V-JEPA 2.1 representations, reaching 0.94 AUROC on 3,689 clips from 37 patients.</li>
+    <li>Designed a gradient-free counterfactual attribution framework that outperformed native attention by +0.23 logit at a 10% region-time selection budget (paired p &lt; 0.001).</li>
+    <li>Audited subject-disjoint cross-validation folds, found class-prevalence imbalance (4.0–18.3%), and redesigned a reproducible split with ~13% prevalence per fold using label counts, not model performance.</li>
   </ul>
 </div>
 
@@ -108,14 +108,13 @@ description:
 <div class="cv-entry">
   <div class="cv-entry-header">
     <span class="cv-org">Stony Brook Computer Vision Lab</span>
-    <span class="cv-date">2026</span>
+    <span class="cv-date">Feb 2026 – Present</span>
   </div>
-  <div class="cv-entry-title">Student Researcher</div>
+  <div class="cv-entry-title">Graduate Student Researcher (M.S. Thesis) · Advisor: Prof. Zhaozheng Yin</div>
   <div class="cv-entry-loc">Stony Brook, NY, USA</div>
   <ul>
-    <li>Medical image segmentation with SAM-based vision foundation models under low-annotation settings.</li>
-    <li>Benchmarked zero-shot/few-shot segmentation; investigated sensitivity to support/reference image selection.</li>
-    <li>Evaluated on Kvasir-SEG and related medical-image datasets.</li>
+    <li>Extending the ICU agitation work as an M.S. thesis, analyzing which spatial and temporal evidence drives predictions from frozen V-JEPA 2.1 representations.</li>
+    <li>Benchmarked vision foundation models for few-shot medical segmentation on Kvasir-SEG, reaching 34.85% Dice vs. 24.45% in prior work, with Dice ranging from 36.8% to 73.5% on support-image choice alone.</li>
   </ul>
 </div>
 
@@ -143,7 +142,7 @@ description:
     <span class="cv-date">May – Aug 2026</span>
   </div>
   <ul>
-    <li>Built spatiotemporal interpretability pipeline over frozen V-JEPA representations; implemented Top-K Sparse Autoencoders and counterfactual auditing framework.</li>
+    <li>Spatiotemporal interpretability over frozen V-JEPA 2.1 representations: 0.94 AUROC predictor and a gradient-free counterfactual auditing framework (+0.23 logit over native attention).</li>
   </ul>
 </div>
 
@@ -163,7 +162,7 @@ description:
     <span class="cv-date">Feb – May 2026</span>
   </div>
   <ul>
-    <li>Reproduced SAM-based zero-shot segmentation experiments on Kvasir-SEG; DSC 34.85 vs. 24.45 baseline.</li>
+    <li>Reproduced SAM-based few-shot segmentation on Kvasir-SEG (34.85% Dice vs. 24.45% reported) and showed that support-image choice alone swings Dice from 36.8% to 73.5%.</li>
   </ul>
 </div>
 
@@ -183,7 +182,7 @@ description:
     <span class="cv-date">Mar – May 2024</span>
   </div>
   <ul>
-    <li>YOLOv8 object detection (83% accuracy), MediaPipe gesture recognition, Flask/AWS EC2 cloud inference; published at KEMS 2024.</li>
+    <li>Fine-tuned YOLOv8 with MediaPipe hand tracking to identify the product in the user's hand; Flask inference backend deployed on GCP for a Flutter app. Gold Award; published at KEMS 2024.</li>
   </ul>
 </div>
 
@@ -193,7 +192,7 @@ description:
     <span class="cv-date">Sep 2023 – Mar 2024</span>
   </div>
   <ul>
-    <li>Spring Boot backend with public healthcare API integration and GCP deployment (99.9% uptime); published at DCS 2024.</li>
+    <li>Spring Boot backend with public healthcare API integration and GCP deployment; Bronze Award at KDCS 2024.</li>
   </ul>
 </div>
 
@@ -209,7 +208,37 @@ description:
 </div>
 
 <div class="cv-section">
+<h2>Publications</h2>
+
+<div class="cv-entry">
+  <ul>
+    <li><strong>Y. Cho</strong>, J. Lee. “Real-time Shopping Assistant for the Visually Impaired.” <em>Korean Entertainment Media Society Fall Conference</em>, Vol. 27, No. 2, 2024.</li>
+    <li><strong>Y. Cho</strong>, J. Lee. “A Study on Drug Interaction and Side Effect Prevention.” <em>Korea Digital Content Society Summer Conference</em>, 2024. Bronze Award.</li>
+  </ul>
+</div>
+</div>
+
+<div class="cv-section">
 <h2>Teaching</h2>
+
+<div class="cv-entry">
+  <div class="cv-entry-header">
+    <span class="cv-org">Teaching Assistant, IAE 101: Introduction to Digital Intelligence</span>
+    <span class="cv-date">Sep 2026 – Present</span>
+  </div>
+  <div class="cv-entry-loc">Stony Brook University, NY</div>
+</div>
+
+<div class="cv-entry">
+  <div class="cv-entry-header">
+    <span class="cv-org">Pre-College STEM Robotics Instructor</span>
+    <span class="cv-date">Sep 2026 – Present</span>
+  </div>
+  <div class="cv-entry-loc">Stony Brook University, NY</div>
+  <ul>
+    <li>Teach the SnappyXO robotics course to pre-college students.</li>
+  </ul>
+</div>
 
 <div class="cv-entry">
   <div class="cv-entry-header">
@@ -269,6 +298,10 @@ description:
 </div>
 <div class="cv-award-item">
   <span class="cv-award-name">Gold Award — IT Project Competition, Sookmyung Women's University</span>
+  <span class="cv-award-meta">2024</span>
+</div>
+<div class="cv-award-item">
+  <span class="cv-award-name">Bronze Award — 2024 Korea Digital Content Society Summer Conference</span>
   <span class="cv-award-meta">2024</span>
 </div>
 <div class="cv-award-item">

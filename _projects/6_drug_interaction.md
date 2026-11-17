@@ -14,7 +14,7 @@ Medication management and safety application providing dosage tracking, drug-int
 
 - Public healthcare API integration for drug and interaction data.
 - Spring Boot backend with REST API and database design.
-- GCP deployment with 99.9% uptime.
-- Published at the 2024 Korea Digital Content Society Summer Conference.
+- Backend deployed on GCP for real-time drug interaction checks.
+- Presented at the 2024 Korea Digital Content Society Summer Conference and won the **Bronze Award**.
 
 `Spring Boot` · `GCP` · `REST API` · `Java` · `Public Health API`
